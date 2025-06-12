@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موکب حب الحسین | خدمت به زائرین اربعین</title>
+  <meta name="description" content="موکب حب الحسین - ارائه خدمات به زائرین پیاده امام حسین(ع) در مسیر نجف به کربلا">
+  <meta name="keywords" content="موکب اربعین, خدمات زائرین, پیاده روی اربعین, موکب حب الحسین">
+  <meta property="og:title" content="موکب حب الحسین">
+  <meta property="og:description" content="ارائه خدمات رفاهی و فرهنگی به زائران اربعین حسینی">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Imam_Husayn.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Imam_Husayn.svg/512px-Flag_of_Imam_Husayn.svg.png" type="image/png">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .social-icon {
+      transition: transform 0.2s;
+    }
+    .social-icon:hover {
+      transform: scale(1.2);
+    }
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: #b91c1c;
+      color: white;
+      cursor: pointer;
+      padding: 12px;
+      border-radius: 50%;
+      font-size: 18px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    #backToTop:hover {
+      background-color: #991b1b;
+    }
+    .skeleton {
+      animation: skeleton-loading 1s linear infinite alternate;
+    }
+    @keyframes skeleton-loading {
+      0% {
+        background-color: hsl(200, 20%, 80%);
+      }
+      100% {
+        background-color: hsl(200, 20%, 95%);
+      }
+    }
+    .menu-mobile {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Notification Bar -->
+  <div class="bg-yellow-200 text-center p-2 text-sm text-gray-800 flex justify-center items-center">
+    <span class="ml-2">📢</span>
+    <span>اطلاعیه: ثبت‌نام خادمین آغاز شد — </span>
+    <a href="#register" class="underline text-blue-600 mr-1">هم‌اکنون ثبت‌نام کنید</a>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-red-700 text-white p-4 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Imam_Husayn.svg/512px-Flag_of_Imam_Husayn.svg.png" alt="پرچم موکب" class="h-8 mr-2">
+        <h1 class="text-2xl font-bold">موکب حب الحسین</h1>
+      </div>
+      <nav class="hidden md:flex space-x-4 space-x-reverse">
+        <a href="#about" class="hover:underline px-2 py-1 rounded hover:bg-red-800 transition">درباره ما</a>
+        <a href="#services" class="hover:underline px-2 py-1 rounded hover:bg-red-800 transition">خدمات</a>
+        <a href="#gallery" class="hover:underline px-2 py-1 rounded hover:bg-red-800 transition">گالری</a>
+        <a href="#register" class="hover:underline px-2 py-1 rounded hover:bg-red-800 transition">ثبت‌نام خادمین</a>
+        <a href="#media" class="hover:underline px-2 py-1 rounded hover:bg-red-800 transition">رسانه</a>
+        <a href="#contact" class="hover:underline px-2 py-1 rounded hover:bg-red-800 transition">تماس با ما</a>
+      </nav>
+      <button id="mobileMenuButton" class="md:hidden text-2xl">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="menu-mobile hidden md:hidden bg-red-800 mt-2 py-2 px-4 rounded-lg">
+      <a href="#about" class="block py-2 hover:bg-red-700 px-2 rounded transition">درباره ما</a>
+      <a href="#services" class="block py-2 hover:bg-red-700 px-2 rounded transition">خدمات</a>
+      <a href="#gallery" class="block py-2 hover:bg-red-700 px-2 rounded transition">گالری</a>
+      <a href="#register" class="block py-2 hover:bg-red-700 px-2 rounded transition">ثبت‌نام خادمین</a>
+      <a href="#media" class="block py-2 hover:bg-red-700 px-2 rounded transition">رسانه</a>
+      <a href="#contact" class="block py-2 hover:bg-red-700 px-2 rounded transition">تماس با ما</a>
+    </div>
+  </header>
+
+  <!-- Countdown to Arba'een -->
+  <div class="bg-black text-white p-4 text-center" data-aos="fade-down">
+    <h3 class="text-xl mb-2">زمان باقی‌مانده تا اربعین حسینی</h3>
+    <div id="countdown" class="flex justify-center space-x-4 space-x-reverse text-2xl">
+      <div><span id="days">00</span> روز</div>
+      <div><span id="hours">00</span> ساعت</div>
+      <div><span id="minutes">00</span> دقیقه</div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative bg-[url('https://images.unsplash.com/photo-1601593768799-76e6d8a8d7e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')] bg-cover bg-center text-center py-32" data-aos="fade-up">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto relative z-10 px-4">
+      <h2 class="text-4xl font-bold text-white mb-4">به موکب حب الحسین خوش آمدید</h2>
+      <p class="text-white text-xl mb-6">خدمت به زائرین اباعبدالله الحسین علیه‌السلام افتخار ماست</p>
+      <div class="flex justify-center space-x-4 space-x-reverse">
+        <a href="#register" class="bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-lg font-medium transition">ثبت‌نام خادمین</a>
+        <a href="#contact" class="bg-white hover:bg-gray-100 text-red-700 px-6 py-3 rounded-lg font-medium transition">تماس با موکب</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="container mx-auto px-4 py-3 text-sm text-gray-600">
+    <a href="#" class="text-red-700">خانه</a>
+    <span class="mx-2">/</span>
+    <span>صفحه اصلی</span>
+  </div>
+
+  <!-- About -->
+  <section id="about" class="container mx-auto py-12 px-4" data-aos="fade-right">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+        <img src="https://images.unsplash.com/photo-1601593768799-76e6d8a8d7e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="موکب حب الحسین" class="rounded-lg shadow-lg w-full h-auto">
+      </div>
+      <div class="md:w-1/2">
+        <h3 class="text-2xl font-bold text-red-700 mb-4">درباره موکب</h3>
+        <p class="text-gray-700 leading-loose mb-4">
+          موکب حب الحسین در مسیر پیاده‌روی اربعین با هدف خدمت‌رسانی به زائرین امام حسین (ع) فعالیت می‌کند. ما با تمام وجود تلاش می‌کنیم تا محلی گرم، امن و پر از محبت اهل‌بیت (ع) برای زائران فراهم کنیم.
+        </p>
+        <p class="text-gray-700 leading-loose">
+          این موکب از سال ۱۳۹۵ فعالیت خود را آغاز کرده و هر ساله با حضور خادمین داوطلب، خدمات گسترده‌ای به زائران حسینی ارائه می‌دهد. ما در عمود ۱۴۰۰ مسیر نجف به کربلا مستقر هستیم و پذیرای تمام زائرین از سراسر جهان می‌باشیم.
+        </p>
+        <div class="mt-6 grid grid-cols-2 gap-4">
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div class="text-red-600 text-2xl mb-2">+۵۰۰۰</div>
+            <div class="text-gray-600">زائر روزانه</div>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div class="text-red-600 text-2xl mb-2">۷</div>
+            <div class="text-gray-600">سال سابقه</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="bg-gray-50 py-12 px-4" data-aos="fade-left">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-bold text-red-700 mb-8 text-center">خدمات ما</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow text-center">
+          <div class="text-red-600 text-4xl mb-4">🍲</div>
+          <h4 class="font-bold text-lg mb-2">پذیرایی غذا</h4>
+          <p class="text-gray-600">پذیرایی گرم و سرد با بهترین کیفیت برای زائرین</p>
+          <ul class="mt-3 text-sm text-gray-500 text-right space-y-1">
+            <li>• صبحانه کامل</li>
+            <li>• ناهار و شام گرم</li>
+            <li>• میان‌وعده‌های مقوی</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow text-center">
+          <div class="text-red-600 text-4xl mb-4">🛏️</div>
+          <h4 class="font-bold text-lg mb-2">محل استراحت</h4>
+          <p class="text-gray-600">محل استراحت شبانه با امکانات مناسب</p>
+          <ul class="mt-3 text-sm text-gray-500 text-right space-y-1">
+            <li>• چادرهای گرم و ایمن</li>
+            <li>• سرویس بهداشتی تمیز</li>
+            <li>• آب گرم برای استحمام</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow text-center">
+          <div class="text-red-600 text-4xl mb-4">🏥</div>
+          <h4 class="font-bold text-lg mb-2">خدمات پزشکی</h4>
+          <p class="text-gray-600">خدمات اولیه پزشکی و درمانی</p>
+          <ul class="mt-3 text-sm text-gray-500 text-right space-y-1">
+            <li>• درمانگاه مجهز</li>
+            <li>• پزشک و پرستار حاضر</li>
+            <li>• داروهای ضروری</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow text-center">
+          <div class="text-red-600 text-4xl mb-4">📚</div>
+          <h4 class="font-bold text-lg mb-2">برنامه‌های فرهنگی</h4>
+          <p class="text-gray-600">برگزاری مراسم عزاداری و برنامه‌های مذهبی</p>
+          <ul class="mt-3 text-sm text-gray-500 text-right space-y-1">
+            <li>• مراسم روضه‌خوانی</li>
+            <li>• جلسات تفسیر قرآن</li>
+            <li>• نمایشگاه کتاب مذهبی</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Additional Services -->
+      <div class="mt-12 bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
+        <h4 class="font-bold text-lg text-red-700 mb-4">سایر خدمات ویژه</h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="flex items-start">
+            <div class="text-red-600 text-xl ml-2 mt-1">•</div>
+            <div>
+              <h5 class="font-medium">رزرو آنلاین</h5>
+              <p class="text-gray-600 text-sm">امکان رزرو محل استراحت برای گروه‌های بزرگ</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="text-red-600 text-xl ml-2 mt-1">•</div>
+            <div>
+              <h5 class="font-medium">چت زنده</h5>
+              <p class="text-gray-600 text-sm">پشتیبانی آنلاین برای پاسخ به سوالات زائرین</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="text-red-600 text-xl ml-2 mt-1">•</div>
+            <div>
+              <h5 class="font-medium">سیستم پیگیری</h5>
+              <p class="text-gray-600 text-sm">امکان پیگیری وسایل گمشده زائرین</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="container mx-auto py-12 px-4" data-aos="zoom-in">
+    <h3 class="text-2xl font-bold text-red-700 mb-8 text-center">گالری تصاویر</h3>
+    
+    <!-- Gallery Navigation -->
+    <div class="flex justify-center mb-6">
+      <div class="inline-flex rounded-md shadow-sm">
+        <button type="button" class="px-4 py-2 text-sm font-medium rounded-r-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-red-200">
+          همه
+        </button>
+        <button type="button" class="px-4 py-2 text-sm font-medium border-t border-b border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-red-200">
+          پذیرایی
+        </button>
+        <button type="button" class="px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-red-200">
+          مراسم
+        </button>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Skeleton Loading -->
+      <div id="gallerySkeleton" class="space-y-4">
+        <div class="skeleton h-64 rounded-lg"></div>
+        <div class="skeleton h-4 rounded"></div>
+        <div class="skeleton h-4 rounded w-5/6"></div>
+      </div>
+      
+      <!-- Actual Gallery (hidden by default) -->
+      <div id="galleryContent" class="hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1601593768799-76e6d8a8d7e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="تصویر موکب" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+          <div class="p-4">
+            <h4 class="font-medium">پذیرایی از زائرین</h4>
+            <p class="text-gray-600 text-sm mt-1">خدمت‌رسانی به زائرین در موکب</p>
+          </div>
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="زائرین" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+          <div class="p-4">
+            <h4 class="font-medium">زائرین در حال استراحت</h4>
+            <p class="text-gray-600 text-sm mt-1">محل استراحت شبانه موکب</p>
+          </div>
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="خدمات موکب" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+          <div class="p-4">
+            <h4 class="font-medium">مراسم عزاداری</h4>
+            <p class="text-gray-600 text-sm mt-1">برگزاری مراسم روضه‌خوانی</p>
+          </div>
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1601593768799-76e6d8a8d7e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="مراسم عزاداری" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+          <div class="p-4">
+            <h4 class="font-medium">تیم پزشکی موکب</h4>
+            <p class="text-gray-600 text-sm mt-1">ارائه خدمات درمانی به زائرین</p>
+          </div>
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="خادمین" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+          <div class="p-4">
+            <h4 class="font-medium">خادمین موکب</h4>
+            <p class="text-gray-600 text-sm mt-1">تیم خادمین داوطلب موکب</p>
+          </div>
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1601593768799-76e6d8a8d7e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="فضای موکب" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+          <div class="p-4">
+            <h4 class="font-medium">نمای کلی موکب</h4>
+            <p class="text-gray-600 text-sm mt-1">فضای عمومی موکب حب الحسین</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-8">
+      <button class="bg-red-700 hover:bg-red-800 text-white px-6 py-2 rounded-lg transition">
+        مشاهده همه تصاویر
+      </button>
+    </div>
+  </section>
+
+  <!-- Volunteer Registration -->
+  <section id="register" class="bg-white py-12 px-4" data-aos="fade-up">
+    <div class="container mx-auto max-w-4xl">
+      <div class="bg-gradient-to-r from-red-700 to-red-800 text-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold mb-2">ثبت‌نام خادمین موکب</h3>
+        <p class="mb-6">هم‌اکنون به جمع خادمین امام حسین(ع) بپیوندید</p>
+        
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-white mb-1">نام کامل</label>
+              <input type="text" id="name" class="w-full p-3 rounded border-0 bg-red-600 text-white placeholder-red-300 focus:ring-2 focus:ring-red-300">
+            </div>
+            <div>
+              <label for="phone" class="block text-white mb-1">شماره تماس</label>
+              <input type="tel" id="phone" class="w-full p-3 rounded border-0 bg-red-600 text-white placeholder-red-300 focus:ring-2 focus:ring-red-300">
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label for="age" class="block text-white mb-1">سن</label>
+              <input type="number" id="age" class="w-full p-3 rounded border-0 bg-red-600 text-white placeholder-red-300 focus:ring-2 focus:ring-red-300">
+            </div>
+            <div>
+              <label for="city" class="block text-white mb-1">شهر محل سکونت</label>
+              <input type="text" id="city" class="w-full p-3 rounded border-0 bg-red-600 text-white placeholder-red-300 focus:ring-2 focus:ring-red-300">
+            </div>
+            <div>
+              <label for="experience" class="block text-white mb-1">سابقه خدمت</label>
+              <select id="experience" class="w-full p-3 rounded border-0 bg-red-600 text-white focus:ring-2 focus:ring-red-300">
+                <option value="">انتخاب کنید</option>
+                <option value="first">اولین بار</option>
+                <option value="1-3">1-3 سال</option>
+                <option value="3+">بیش از 3 سال</option>
+              </select>
+            </div>
+          </div>
+          
+          <div>
+            <label for="skills" class="block text-white mb-1">مهارت‌ها و تخصص‌ها</label>
+            <textarea id="skills" rows="3" class="w-full p-3 rounded border-0 bg-red-600 text-white placeholder-red-300 focus:ring-2 focus:ring-red-300"></textarea>
+          </div>
+          
+          <div>
+            <label for="availability" class="block text-white mb-1">دوره زمانی خدمت</label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <label class="inline-flex items-center">
+                <input type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50">
+                <span class="mr-2">هفته اول</span>
+              </label>
+              <label class="inline-flex items-center">
+                <input type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50">
+                <span class="mr-2">هفته دوم</span>
+              </label>
+              <label class="inline-flex items-center">
+                <input type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50">
+                <span class="mr-2">تمام دوره</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="pt-2">
+            <button type="submit" class="w-full bg-white text-red-700 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+              ثبت نام به عنوان خادم
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Volunteer Benefits -->
+      <div class="mt-12 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+        <h4 class="text-xl font-bold text-red-700 mb-4 text-center">مزایای عضویت در تیم خادمین</h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="flex items-start">
+            <div class="bg-red-100 p-3 rounded-full text-red-700 ml-3">
+              <i class="fas fa-hands-helping text-lg"></i>
+            </div>
+            <div>
+              <h5 class="font-bold">گواهی خدمت</h5>
+              <p class="text-gray-600 text-sm mt-1">اعطای گواهی نامه رسمی خدمت در موکب</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="bg-red-100 p-3 rounded-full text-red-700 ml-3">
+              <i class="fas fa-utensils text-lg"></i>
+            </div>
+            <div>
+              <h5 class="font-bold">پذیرایی رایگان</h5>
+              <p class="text-gray-600 text-sm mt-1">پذیرایی کامل در طول دوره خدمت</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="bg-red-100 p-3 rounded-full text-red-700 ml-3">
+              <i class="fas fa-gift text-lg"></i>
+            </div>
+            <div>
+              <h5 class="font-bold">هدایای ویژه</h5>
+              <p class="text-gray-600 text-sm mt-1">دریافت هدایای مذهبی و یادبود</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Section -->
+  <section id="media" class="container mx-auto py-12 px-4" data-aos="fade-left">
+    <h3 class="text-2xl font-bold text-red-700 mb-8 text-center">رسانه موکب</h3>
+    
+    <!-- Audio Section -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+      <h4 class="text-lg font-semibold text-gray-800 mb-4">پخش صوت مداحی</h4>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <div class="flex items-center mb-3">
+            <div class="bg-red-100 p-2 rounded-full text-red-700 ml-2">
+              <i class="fas fa-music"></i>
+            </div>
+            <h5 class="font-medium">مداحی ویژه اربعین</h5>
+          </div>
+          <audio controls class="w-full">
+            <source src="madahi.mp3" type="audio/mpeg">
+            مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+          </audio>
+        </div>
+        <div>
+          <div class="flex items-center mb-3">
+            <div class="bg-red-100 p-2 rounded-full text-red-700 ml-2">
+              <i class="fas fa-microphone"></i>
+            </div>
+            <h5 class="font-medium">سخنرانی مذهبی</h5>
+          </div>
+          <audio controls class="w-full">
+            <source src="speech.mp3" type="audio/mpeg">
+            مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+          </audio>
+        </div>
+      </div>
+    </div>
+    
+    <!-- YouTube Live -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+      <h4 class="text-lg font-semibold text-gray-800 mb-4">پخش زنده یوتیوب</h4>
+      <div class="relative h-0 pb-[56.25%] overflow-hidden rounded-lg bg-gray-200">
+        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/live_stream?channel=CHANNEL_ID" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="mt-4 text-center">
+        <a href="#" class="inline-flex items-center text-red-700 hover:text-red-800">
+          <i class="fab fa-youtube ml-1"></i>
+          <span>مشاهده کانال یوتیوب ما</span>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Instagram Live -->
+    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+      <h4 class="text-lg font-semibold text-gray-800 mb-4">پخش زنده اینستاگرام</h4>
+      <div class="relative h-0 pb-[56.25%] overflow-hidden rounded-lg bg-gray-200 flex items-center justify-center">
+        <div class="absolute text-center p-4">
+          <i class="fab fa-instagram text-4xl text-pink-600 mb-2"></i>
+          <p class="text-gray-600 mb-3">برای مشاهده پخش زنده اینستاگرام، به صفحه ما مراجعه کنید:</p>
+          <a href="https://instagram.com/hobal_hosein" target="_blank" class="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-shadow">
+            <i class="fab fa-instagram ml-1"></i>
+            اینستاگرام موکب
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Aparat Live -->
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h4 class="text-lg font-semibold text-gray-800 mb-4">پخش زنده آپارات</h4>
+      <div class="relative h-0 pb-[56.25%] overflow-hidden rounded-lg bg-gray-200">
+        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.aparat.com/video/video/embed/videohash/YOUR_HASH/vt/frame" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="mt-4 text-center">
+        <a href="#" class="inline-flex items-center text-red-700 hover:text-red-800">
+          <i class="fas fa-video ml-1"></i>
+          <span>مشاهده کانال آپارات ما</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Religious Content -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-bold text-red-700 mb-8 text-center">محتوای معنوی</h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Prayers -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <div class="flex items-center mb-4">
+            <div class="bg-red-100 p-3 rounded-full text-red-700 ml-3">
+              <i class="fas fa-pray"></i>
+            </div>
+            <h4 class="text-lg font-bold">ادعیه مخصوص زائرین</h4>
+          </div>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-circle text-xs text-red-500 mt-2 ml-2"></i>
+              <span>دعای ورود به کربلا</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-circle text-xs text-red-500 mt-2 ml-2"></i>
+              <span>زیارت عاشورا با ترجمه</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-circle text-xs text-red-500 mt-2 ml-2"></i>
+              <span>مناجات زائرین</span>
+            </li>
+          </ul>
+                    <button class="mt-4 text-red-700 hover:text-red-800 flex items-center">
+            مشاهده همه ادعیه
+            <i class="fas fa-arrow-left mr-1"></i>
+          </button>
+        </div>
+        
+        <!-- Hadiths -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <div class="flex items-center mb-4">
+            <div class="bg-red-100 p-3 rounded-full text-red-700 ml-3">
+              <i class="fas fa-book-quran"></i>
+            </div>
+            <h4 class="text-lg font-bold">احادیث اربعین</h4>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg mb-3">
+            <p class="text-gray-800 font-medium">"زائر امام حسین(ع) مانند کسی است که در راه خدا جهاد کرده باشد"</p>
+            <p class="text-gray-600 text-sm mt-1">بحارالانوار، ج 98، ص 22</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <p class="text-gray-800 font-medium">"زیارت امام حسین(ع) بر هر مؤمنی که به امامت او معترف باشد، واجب است"</p>
+            <p class="text-gray-600 text-sm mt-1">کامل الزیارات، ص 135</p>
+          </div>
+          <button class="mt-4 text-red-700 hover:text-red-800 flex items-center">
+            مشاهده همه احادیث
+            <i class="fas fa-arrow-left mr-1"></i>
+          </button>
+        </div>
+        
+        <!-- Stories -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <div class="flex items-center mb-4">
+            <div class="bg-red-100 p-3 rounded-full text-red-700 ml-3">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h4 class="text-lg font-bold">کرامات زائرین</h4>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-start">
+              <div class="bg-red-100 text-red-700 p-1 rounded-full ml-2 mt-1">
+                <i class="fas fa-circle text-xs"></i>
+              </div>
+              <div>
+                <h5 class="font-medium">شفای بیمار صعب العلاج</h5>
+                <p class="text-gray-600 text-sm">خاطره ای از زائری که پس از زیارت شفا یافت</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="bg-red-100 text-red-700 p-1 rounded-full ml-2 mt-1">
+                <i class="fas fa-circle text-xs"></i>
+              </div>
+              <div>
+                <h5 class="font-medium">هدایت یک خانواده</h5>
+                <p class="text-gray-600 text-sm">تاثیر زیارت بر زندگی یک خانواده غیرمذهبی</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="bg-red-100 text-red-700 p-1 rounded-full ml-2 mt-1">
+                <i class="fas fa-circle text-xs"></i>
+              </div>
+              <div>
+                <h5 class="font-medium">معجزه در راه بازگشت</h5>
+                <p class="text-gray-600 text-sm">نجات از سانحه رانندگی پس از زیارت</p>
+              </div>
+            </div>
+          </div>
+          <button class="mt-4 text-red-700 hover:text-red-800 flex items-center">
+            مشاهده همه خاطرات
+            <i class="fas fa-arrow-left mr-1"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="container mx-auto py-12 px-4" data-aos="fade-right">
+    <h3 class="text-2xl font-bold text-red-700 mb-8 text-center">تماس با موکب</h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Contact Form -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h4 class="text-lg font-semibold mb-4">فرم تماس</h4>
+        <form class="space-y-4">
+          <div>
+            <label for="contactName" class="block text-gray-700 mb-1">نام شما</label>
+            <input type="text" id="contactName" class="w-full p-3 rounded border border-gray-300 focus:ring-2 focus:ring-red-200 focus:border-red-300">
+          </div>
+          <div>
+            <label for="contactEmail" class="block text-gray-700 mb-1">ایمیل</label>
+            <input type="email" id="contactEmail" class="w-full p-3 rounded border border-gray-300 focus:ring-2 focus:ring-red-200 focus:border-red-300">
+          </div>
+          <div>
+            <label for="contactSubject" class="block text-gray-700 mb-1">موضوع</label>
+            <input type="text" id="contactSubject" class="w-full p-3 rounded border border-gray-300 focus:ring-2 focus:ring-red-200 focus:border-red-300">
+          </div>
+          <div>
+            <label for="contactMessage" class="block text-gray-700 mb-1">پیام شما</label>
+            <textarea id="contactMessage" rows="4" class="w-full p-3 rounded border border-gray-300 focus:ring-2 focus:ring-red-200 focus:border-red-300"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-lg font-bold transition">
+            ارسال پیام
+          </button>
+        </form>
+      </div>
+      
+      <!-- Contact Info -->
+      <div class="space-y-6">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-lg font-semibold mb-3">اطلاعات تماس</h4>
+          <div class="space-y-3">
+            <div class="flex items-start">
+              <div class="bg-red-100 p-2 rounded-full text-red-700 ml-3">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h5 class="font-medium">آدرس موکب</h5>
+                <p class="text-gray-600">عراق، استان کربلا، مسیر نجف به کربلا، عمود 1400</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="bg-red-100 p-2 rounded-full text-red-700 ml-3">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <h5 class="font-medium">تلفن تماس</h5>
+                <p class="text-gray-600">+964 771 123 4567 (عراق)</p>
+                <p class="text-gray-600">+98 912 345 6789 (ایران)</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="bg-red-100 p-2 rounded-full text-red-700 ml-3">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h5 class="font-medium">ایمیل</h5>
+                <p class="text-gray-600">info@hobolhosein.org</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Social Media -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-lg font-semibold mb-3">شبکه‌های اجتماعی</h4>
+          <div class="flex space-x-4 space-x-reverse justify-center md:justify-start">
+            <a href="#" class="social-icon bg-blue-600 text-white p-3 rounded-full w-12 h-12 flex items-center justify-center">
+              <i class="fab fa-telegram-plane text-xl"></i>
+            </a>
+            <a href="#" class="social-icon bg-pink-600 text-white p-3 rounded-full w-12 h-12 flex items-center justify-center">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="#" class="social-icon bg-blue-500 text-white p-3 rounded-full w-12 h-12 flex items-center justify-center">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="social-icon bg-red-600 text-white p-3 rounded-full w-12 h-12 flex items-center justify-center">
+              <i class="fab fa-youtube text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Map -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-lg font-semibold mb-3">موقعیت مکانی</h4>
+          <div class="relative h-0 pb-[56.25%] overflow-hidden rounded-lg bg-gray-200">
+            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3360.847075356343!2d44.01958231538496!3d32.58694078107039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDM1JzEzLjAiTiA0NMKwMDEnMTkuOCJF!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-gray-50 py-12 px-4">
+    <div class="container mx-auto max-w-4xl">
+      <h3 class="text-2xl font-bold text-red-700 mb-8 text-center">سوالات متداول</h3>
+      
+      <div class="space-y-4">
+        <div class="bg-white p-5 rounded-lg shadow-md">
+          <button class="faq-toggle w-full flex justify-between items-center text-right">
+            <span class="font-medium text-gray-800">موکب در چه تاریخی شروع به کار می‌کند؟</span>
+            <i class="fas fa-chevron-down text-red-700 transition-transform"></i>
+          </button>
+          <div class="faq-content mt-3 text-gray-600 hidden">
+            موکب حب الحسین از 10 روز قبل از اربعین تا 5 روز پس از آن فعال است. تاریخ دقیق هر سال بر اساس تقویم قمری اعلام می‌شود.
+          </div>
+        </div>
+        
+        <div class="bg-white p-5 rounded-lg shadow-md">
+          <button class="faq-toggle w-full flex justify-between items-center text-right">
+            <span class="font-medium text-gray-800">آیا امکان اقامت چند روزه در موکب وجود دارد؟</span>
+            <i class="fas fa-chevron-down text-red-700 transition-transform"></i>
+          </button>
+          <div class="faq-content mt-3 text-gray-600 hidden">
+            بله، زائرین می‌توانند حداکثر 3 شب در موکب اقامت داشته باشند. برای اقامت طولانی‌تر باید هماهنگی قبلی انجام شود.
+          </div>
+        </div>
+        
+        <div class="bg-white p-5 rounded-lg shadow-md">
+          <button class="faq-toggle w-full flex justify-between items-center text-right">
+            <span class="font-medium text-gray-800">شرایط ثبت‌نام خادمین چیست؟</span>
+            <i class="fas fa-chevron-down text-red-700 transition-transform"></i>
+          </button>
+          <div class="faq-content mt-3 text-gray-600 hidden">
+            حداقل سن 18 سال، سلامت جسمی، تعهد به حضور حداقل 7 روز و تمایل به خدمت‌رسانی از شرایط اصلی است. برای تخصص‌های خاص مانند پزشکی شرایط ویژه وجود دارد.
+          </div>
+        </div>
+        
+        <div class="bg-white p-5 rounded-lg shadow-md">
+          <button class="faq-toggle w-full flex justify-between items-center text-right">
+            <span class="font-medium text-gray-800">آیا موکب برای زائرین خارجی خدمات خاصی دارد؟</span>
+            <i class="fas fa-chevron-down text-red-700 transition-transform"></i>
+          </button>
+          <div class="faq-content mt-3 text-gray-600 hidden">
+            بله، مترجمین انگلیسی و عربی در موکب حضور دارند. همچنین راهنمایان ویژه برای کمک به زائرین غیر فارسی زبان در دسترس هستند.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsors -->
+  <section class="container mx-auto py-12 px-4">
+    <h3 class="text-2xl font-bold text-red-700 mb-8 text-center">حامیان موکب</h3>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center">
+        <img src="https://via.placeholder.com/150x80?text=Sponsor+1" alt="حامی 1" class="h-16 object-contain">
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center">
+        <img src="https://via.placeholder.com/150x80?text=Sponsor+2" alt="حامی 2" class="h-16 object-contain">
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center">
+        <img src="https://via.placeholder.com/150x80?text=Sponsor+3" alt="حامی 3" class="h-16 object-contain">
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center">
+        <img src="https://via.placeholder.com/150x80?text=Sponsor+4" alt="حامی 4" class="h-16 object-contain">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 px-4">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-lg font-bold mb-4">درباره موکب</h4>
+          <p class="text-gray-400">موکب حب الحسین با هدف خدمت به زائرین امام حسین(ع) در مسیر پیاده‌روی اربعین تأسیس شده و هر ساله با کمک خیرین و خادمین به فعالیت خود ادامه می‌دهد.</p>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">لینک‌های سریع</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-gray-400 hover:text-white transition">درباره ما</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-white transition">خدمات موکب</a></li>
+            <li><a href="#register" class="text-gray-400 hover:text-white transition">ثبت‌نام خادمین</a></li>
+            <li><a href="#gallery" class="text-gray-400 hover:text-white transition">گالری تصاویر</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition">تماس با ما</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">اطلاعات تماس</h4>
+          <address class="text-gray-400 not-italic">
+            <p class="mb-2">عراق، استان کربلا</p>
+            <p class="mb-2">مسیر نجف به کربلا، عمود 1400</p>
+            <p class="mb-2">تلفن: +964 771 123 4567</p>
+            <p>ایمیل: info@hobolhosein.org</p>
+          </address>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-4">خبرنامه</h4>
+          <p class="text-gray-400 mb-4">برای دریافت آخرین اخبار و اطلاعیه‌های موکب در خبرنامه عضو شوید.</p>
+          <form class="flex">
+            <input type="email" placeholder="ایمیل شما" class="px-4 py-2 rounded-r-lg border-0 focus:ring-2 focus:ring-red-300 w-full">
+            <button type="submit" class="bg-red-700 hover:bg-red-800 px-4 py-2 rounded-l-lg transition">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Imam_Husayn.svg/512px-Flag_of_Imam_Husayn.svg.png" alt="پرچم موکب" class="h-8 mr-2">
+          <span class="font-medium">موکب حب الحسین</span>
+        </div>
+        
+        <div class="text-gray-400 text-sm">
+          <p>© ۱۴۰۲ - تمامی حقوق محفوظ است</p>
+        </div>
+        
+        <div class="flex space-x-4 space-x-reverse mt-4 md:mt-0">
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            <i class="fab fa-telegram-plane text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            <i class="fab fa-youtube text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="بازگشت به بالا">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // FAQ Toggle
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        const icon = toggle.querySelector('i');
+        
+        content.classList.toggle('hidden');
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+      });
+    });
+
+    // Back to Top Button
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Countdown to Arba'een
+    function updateCountdown() {
+      // Set the date for Arba'een (example: October 7, 2023)
+      const arbaEenDate = new Date('September 16, 2024 00:00:00').getTime();
+      const now = new Date().getTime();
+      const distance = arbaEenDate - now;
+      
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      
+      document.getElementById('days').innerText = days.toString().padStart(2, '0');
+      document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+      document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+
+    // Gallery Loading Simulation
+    setTimeout(() => {
+      document.getElementById('gallerySkeleton').classList.add('hidden');
+      document.getElementById('galleryContent').classList.remove('hidden');
+    }, 2000);
+
+    // Initialize AOS Animation
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+</body>
+</html>
