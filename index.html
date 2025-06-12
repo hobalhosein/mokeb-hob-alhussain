@@ -459,18 +459,22 @@
     </div>
     
     <!-- YouTube Live -->
-    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
-      <h4 class="text-lg font-semibold text-gray-800 mb-4">پخش زنده یوتیوب</h4>
-      <div class="relative h-0 pb-[56.25%] overflow-hidden rounded-lg bg-gray-200">
-        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/live_stream?channel=CHANNEL_ID" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="mt-4 text-center">
-        <a href="#" class="inline-flex items-center text-red-700 hover:text-red-800">
-          <i class="fab fa-youtube ml-1"></i>
-          <span>مشاهده کانال یوتیوب ما</span>
-        </a>
-      </div>
-    </div>
+    <!-- ویدیوی بازگزار به جای پخش زنده یوتیوب -->
+<div class="bg-white p-6 rounded-lg shadow-md mb-8">
+  <h4 class="text-lg font-semibold text-gray-800 mb-4">فیلم مراسم موکب</h4>
+  <div class="relative h-0 pb-[56.25%] overflow-hidden rounded-lg bg-gray-200">
+    <video controls class="absolute top-0 left-0 w-full h-full">
+      <source src="videos/mokeb-ceremony.mp4" type="video/mp4">
+      مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+    </video>
+  </div>
+  <div class="mt-4 text-center">
+    <a href="videos/mokeb-ceremony.mp4" download class="inline-flex items-center text-red-700 hover:text-red-800">
+      <i class="fas fa-download ml-1"></i>
+      <span>دانلود ویدیو با کیفیت بالا</span>
+    </a>
+  </div>
+</div>
     
     <!-- Instagram Live -->
     <div class="bg-white p-6 rounded-lg shadow-md mb-8">
