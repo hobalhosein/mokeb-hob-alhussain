@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>موکب حب الحسین</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Imam_Husayn.svg/512px-Flag_of_Imam_Husayn.svg.png" type="image/png">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 font-sans">
-  <header class="bg-red-700 text-white p-4 shadow-md">
+  <!-- Notification Bar -->
+  <div class="bg-yellow-200 text-center p-2 text-sm text-gray-800">
+    اطلاعیه: ثبت‌نام خادمین آغاز شد — <a href="#register" class="underline text-blue-600">هم‌اکنون ثبت‌نام کنید</a>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-red-700 text-white p-4 shadow-md sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold">موکب حب الحسین</h1>
       <nav class="space-x-4 space-x-reverse">
@@ -20,17 +36,23 @@
       </nav>
     </div>
   </header>
-  <section class="bg-white text-center py-16">
-    <h2 class="text-3xl font-bold text-red-700">به موکب حب الحسین خوش آمدید</h2>
-    <p class="mt-4 text-gray-600">خدمت به زائرین اباعبدالله الحسین علیه‌السلام افتخار ماست</p>
+
+  <!-- Hero -->
+  <section class="bg-white text-center py-16" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-red-700">به موکب حب الحسین خوش آمدید</h2>
+    <p class="mt-4 text-gray-600 text-lg">خدمت به زائرین اباعبدالله الحسین علیه‌السلام افتخار ماست</p>
   </section>
-  <section id="about" class="container mx-auto py-10 px-4">
+
+  <!-- About -->
+  <section id="about" class="container mx-auto py-10 px-4" data-aos="fade-right">
     <h3 class="text-2xl font-bold text-red-700 mb-4">درباره موکب</h3>
     <p class="text-gray-700 leading-loose">
       موکب حب الحسین در مسیر پیاده‌روی اربعین با هدف خدمت‌رسانی به زائرین امام حسین (ع) فعالیت می‌کند. ما با تمام وجود تلاش می‌کنیم تا محلی گرم، امن و پر از محبت اهل‌بیت (ع) برای زائران فراهم کنیم.
     </p>
   </section>
-  <section id="services" class="bg-white py-10 px-4">
+
+  <!-- Services -->
+  <section id="services" class="bg-white py-10 px-4" data-aos="fade-left">
     <div class="container mx-auto">
       <h3 class="text-2xl font-bold text-red-700 mb-4">خدمات ما</h3>
       <ul class="list-disc list-inside text-gray-700">
@@ -41,32 +63,38 @@
       </ul>
     </div>
   </section>
-  <section id="gallery" class="container mx-auto py-10 px-4">
+
+  <!-- Gallery -->
+  <section id="gallery" class="container mx-auto py-10 px-4" data-aos="zoom-in">
     <h3 class="text-2xl font-bold text-red-700 mb-4">گالری تصاویر</h3>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <img src="image1.jpg" alt="تصویر 1" class="rounded shadow" />
-      <img src="image2.jpg" alt="تصویر 2" class="rounded shadow" />
-      <img src="image3.jpg" alt="تصویر 3" class="rounded shadow" />
+      <a href="image1.jpg" target="_blank"><img src="image1.jpg" alt="تصویر 1" class="rounded shadow hover:scale-105 transition-transform"></a>
+      <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="تصویر 2" class="rounded shadow hover:scale-105 transition-transform"></a>
+      <a href="image3.jpg" target="_blank"><img src="image3.jpg" alt="تصویر 3" class="rounded shadow hover:scale-105 transition-transform"></a>
     </div>
   </section>
-  <section id="register" class="bg-white py-10 px-4">
+
+  <!-- Volunteer Registration -->
+  <section id="register" class="bg-white py-10 px-4" data-aos="fade-up">
     <div class="container mx-auto max-w-xl">
       <h3 class="text-2xl font-bold text-red-700 mb-4">فرم ثبت‌نام خادمین</h3>
       <form class="space-y-4">
-        <input type="text" placeholder="نام کامل" class="w-full p-2 border rounded" />
-        <input type="tel" placeholder="شماره تماس" class="w-full p-2 border rounded" />
+        <input type="text" placeholder="نام کامل" class="w-full p-2 border rounded">
+        <input type="tel" placeholder="شماره تماس" class="w-full p-2 border rounded">
         <textarea placeholder="مهارت‌ها / توضیحات" class="w-full p-2 border rounded"></textarea>
         <button type="submit" class="bg-red-700 text-white px-4 py-2 rounded hover:bg-red-800">ارسال</button>
       </form>
     </div>
   </section>
-  <section id="media" class="container mx-auto py-10 px-4">
+
+  <!-- Media Section -->
+  <section id="media" class="container mx-auto py-10 px-4" data-aos="fade-left">
     <h3 class="text-2xl font-bold text-red-700 mb-4">رسانه</h3>
     <div class="space-y-6">
       <div>
         <h4 class="text-lg font-semibold text-gray-800">پخش صوت مداحی</h4>
         <audio controls class="w-full">
-          <source src="madahi.mp3" type="audio/mpeg" />
+          <source src="madahi.mp3" type="audio/mpeg">
           مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
         </audio>
       </div>
@@ -77,7 +105,7 @@
       <div>
         <h4 class="text-lg font-semibold text-gray-800">پخش زنده اینستاگرام</h4>
         <p class="text-gray-600">برای مشاهده پخش زنده اینستاگرام، به صفحه ما مراجعه کنید:</p>
-        <a href="https://www.instagram.com/hobal.hosein_sahneh/?hl=en" target="_blank" class="text-blue-600 underline">instagram.com/YOUR_PAGE</a>
+        <a href="https://instagram.com/hobal_hosein" target="_blank" class="text-blue-600 underline">instagram.com/hobal_hosein</a>
       </div>
       <div>
         <h4 class="text-lg font-semibold text-gray-800">پخش زنده آپارات</h4>
@@ -85,15 +113,31 @@
       </div>
     </div>
   </section>
-  <section id="contact" class="bg-gray-200 py-10 px-4">
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-200 py-10 px-4" data-aos="fade-up">
     <div class="container mx-auto">
       <h3 class="text-2xl font-bold text-red-700 mb-4">تماس با ما</h3>
-      <p class="text-gray-700 mb-2">شماره تماس: 09937421322</p>
-      <p class="text-gray-700">آدرس: بزرگ راه همدان کرمانشاه روبروی جایگاه سروش </p>
+      <p class="text-gray-700 mb-2">شماره تماس: ۰۹۱۲۱۲۳۴۵۶۷</p>
+      <p class="text-gray-700 mb-2">آدرس: مسیر نجف به کربلا، عمود ۱۴۰۰</p>
+      <div class="flex justify-center space-x-6 space-x-reverse mt-4">
+        <a href="https://instagram.com/hobal_hosein" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="w-8 h-8">
+        </a>
+        <a href="https://eitaa.com/hobal_hosein" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Eitaa.png" alt="Eitaa" class="w-8 h-8">
+        </a>
+      </div>
     </div>
   </section>
+
+  <!-- Footer -->
   <footer class="bg-red-700 text-white text-center py-4">
     <p>تمام حقوق برای موکب حب الحسین محفوظ است &copy; ۲۰۲۵</p>
   </footer>
+
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
