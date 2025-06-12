@@ -324,24 +324,65 @@
         <h3 class="text-2xl font-bold mb-2">ثبت‌نام خادمین موکب</h3>
         <p class="mb-6">هم‌اکنون به جمع خادمین امام حسین(ع) بپیوندید</p>
         
-        <form action="/submit" method="POST" class="space-y-4">
-  <input type="text" name="name" required placeholder="نام کامل">
-  <input type="tel" name="phone" required placeholder="شماره تماس">
-  <input type="number" name="age" required placeholder="سن">
-  <input type="text" name="city" required placeholder="شهر">
-  <select name="experience" required>
-    <option value="">انتخاب کنید</option>
-    <option value="اولین بار">اولین بار</option>
-    <option value="1-3">1 تا 3 سال</option>
-    <option value="3+">بیش از 3 سال</option>
-  </select>
-  <textarea name="skills" rows="3" placeholder="مهارت‌ها"></textarea>
-  <label><input type="checkbox" name="availability" value="هفته اول"> هفته اول</label>
-  <label><input type="checkbox" name="availability" value="هفته دوم"> هفته دوم</label>
-  <label><input type="checkbox" name="availability" value="تمام دوره"> تمام دوره</label>
-
-  <button type="submit">ثبت‌نام</button>
-</form>
+ <form class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-white mb-1">نام کامل</label>
+              <input type="text" id="name" class="w-full p-3 rounded border-0 bg-red-600 text-white placeholder-red-300 focus:ring-2 focus:ring-red-300">
+            </div>
+            <div>
+              <label for="phone" class="block text-white mb-1">شماره تماس</label>
+              <input type="tel" id="phone" class="w-full p-3 rounded border-0 bg-red-600 text-white placeholder-red-300 focus:ring-2 focus:ring-red-300">
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label for="age" class="block text-white mb-1">سن</label>
+              <input type="number" id="age" class="w-full p-3 rounded border-0 bg-red-600 text-white placeholder-red-300 focus:ring-2 focus:ring-red-300">
+            </div>
+            <div>
+              <label for="city" class="block text-white mb-1">شهر محل سکونت</label>
+              <input type="text" id="city" class="w-full p-3 rounded border-0 bg-red-600 text-white placeholder-red-300 focus:ring-2 focus:ring-red-300">
+            </div>
+            <div>
+              <label for="experience" class="block text-white mb-1">سابقه خدمت</label>
+              <select id="experience" class="w-full p-3 rounded border-0 bg-red-600 text-white focus:ring-2 focus:ring-red-300">
+                <option value="">انتخاب کنید</option>
+                <option value="first">اولین بار</option>
+                <option value="1-3">1-3 سال</option>
+                <option value="3+">بیش از 3 سال</option>
+              </select>
+            </div>
+          </div>
+          
+          <div>
+            <label for="skills" class="block text-white mb-1">مهارت‌ها و تخصص‌ها</label>
+            <textarea id="skills" rows="3" class="w-full p-3 rounded border-0 bg-red-600 text-white placeholder-red-300 focus:ring-2 focus:ring-red-300"></textarea>
+          </div>
+          
+          <div>
+            <label for="availability" class="block text-white mb-1">دوره زمانی خدمت</label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <label class="inline-flex items-center">
+                <input type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50">
+                <span class="mr-2">هفته اول</span>
+              </label>
+              <label class="inline-flex items-center">
+                <input type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50">
+                <span class="mr-2">هفته دوم</span>
+              </label>
+              <label class="inline-flex items-center">
+                <input type="checkbox" class="rounded border-gray-300 text-red-600 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50">
+                <span class="mr-2">تمام دوره</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="pt-2">
+            <button type="submit" class="w-full bg-white text-red-700 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+              ثبت نام به عنوان خادم
+            </button>
           </div>
         </form>
       </div>
